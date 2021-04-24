@@ -25,7 +25,7 @@ public class CameraScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-	if (model.player.health.IsAlive)
+        if (model.player.health.IsAlive)
     		Move();
     }
 
