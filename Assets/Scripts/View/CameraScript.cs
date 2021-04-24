@@ -8,14 +8,18 @@ using Platformer.Core;
 
 public class CameraScript : MonoBehaviour
 {
+    #if UNITY_EDITOR
+    public bool activate = false;
+    #else
+    public bool activate = true;
+    #endif
     public float speed = 0.003f;
-    public GameObject rightWall;
-    public GameObject leftWall;
     readonly PlatformerModel model = Simulation.GetModel<PlatformerModel>();    
 
     // Start is called before the first frame update
     void Start()
     {
+
     }
 
     // Update is called once per frame
@@ -28,9 +32,10 @@ public class CameraScript : MonoBehaviour
     public void Move()
     {
         var cameraPosition = Camera.main.gameObject.transform.position;
+        if (!activate)
+            return;
         
         cameraPosition.x += speed;
-        
         Camera.main.gameObject.transform.position = cameraPosition;
     }
 }

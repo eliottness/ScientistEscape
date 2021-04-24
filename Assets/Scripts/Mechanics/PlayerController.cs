@@ -32,6 +32,9 @@ namespace Platformer.Mechanics
         /*internal new*/ public Collider2D collider2d;
         /*internal new*/ public AudioSource audioSource;
         public Health health;
+
+        public bool dead = false;
+        
         public bool controlEnabled = true;
 
         bool jump;
@@ -53,6 +56,13 @@ namespace Platformer.Mechanics
 
         protected override void Update()
         {
+            if (dead)
+            {
+                var ev = Schedule<HealthIsZero>();
+                ev.health = health;
+                dead = false;
+            }
+
             if (controlEnabled)
             {
                 move.x = Input.GetAxis("Horizontal");
