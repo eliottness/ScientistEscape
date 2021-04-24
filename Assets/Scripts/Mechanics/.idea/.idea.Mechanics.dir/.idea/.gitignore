@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/contentModel.xml
+/modules.xml
+/projectSettingsUpdater.xml
+/.idea.Mechanics.iml
+# Datasource local storage ignored files
+/../../../../../../../../../../../../../:\Users\Eliott B\Documents\Repositories\github.com\ScientistEscape\Assets\Scripts\Mechanics\.idea\.idea.Mechanics.dir\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
