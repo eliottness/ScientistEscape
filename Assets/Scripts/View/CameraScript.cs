@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class CameraScript : MonoBehaviour
 {
+    #if UNITY_EDITOR
+    private bool activate = false;
+    #else
+    private bool activate = true;
+    #endif
     public float speed = 0.003f;
     public GameObject rightWall;
     public GameObject leftWall;
@@ -23,6 +28,9 @@ public class CameraScript : MonoBehaviour
 
     public void Move()
     {
+        if (!activate)
+            return;
+        
         var cameraPosition = Camera.main.gameObject.transform.position;
         var rightWallPosition = rightWall.gameObject.transform.position;
         var leftWallPosition = leftWall.gameObject.transform.position;
