@@ -5,9 +5,9 @@ using UnityEngine;
 public class CameraScript : MonoBehaviour
 {
     #if UNITY_EDITOR
-    private bool activate = false;
+    public bool activate = false;
     #else
-    private bool activate = true;
+    public bool activate = true;
     #endif
     public float speed = 0.003f;
     public GameObject rightWall;
