@@ -2,6 +2,9 @@
     "m_Name": "Settings",
     "m_Path": "ProjectSettings/Packages/com.unity.connect.share/Settings.json",
     "m_Dictionary": {
+<<<<<<< HEAD
+        "m_DictionaryValues": []
+=======
         "m_DictionaryValues": [
             {
                 "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
@@ -24,5 +27,6 @@
                 "value": "{\"m_Value\":\"C:/Users/Eliott B/Documents/Repositories/github.com/ScientistEscape/WebGL Builds;;;;;;;;;\"}"
             }
         ]
+>>>>>>> 28b1814c0ecec7f8a70cdb764a9e56de6a923f51
     }
 }
