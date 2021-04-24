@@ -11,11 +11,9 @@ namespace Platformer.Model
     [System.Serializable]
     public class PlatformerModel
     {
-        /// <summary>
-        /// The virtual camera in the scene.
-        /// </summary>
-        public Cinemachine.CinemachineVirtualCamera virtualCamera;
 
+        public GameObject camera;
+        
         /// <summary>
         /// The main component which controls the player sprite, controlled 
         /// by the user.
@@ -26,6 +24,7 @@ namespace Platformer.Model
         /// The spawn point in the scene.
         /// </summary>
         public Transform spawnPoint;
+        public Transform cameraSpawnPoint;
 
         /// <summary>
         /// A global jump modifier applied to all initial jump velocities.

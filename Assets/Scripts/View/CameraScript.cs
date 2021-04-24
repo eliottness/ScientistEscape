@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class CameraScript : MonoBehaviour
 {
+    #if UNITY_EDITOR
+    public bool activate = false;
+    #else
+    public bool activate = true;
+    #endif
     public float speed = 0.003f;
     
     // Start is called before the first frame update
@@ -20,6 +25,9 @@ public class CameraScript : MonoBehaviour
 
     public void Move()
     {
+        if (!activate)
+            return;
+        
         var cameraPosition = Camera.main.gameObject.transform.position;
         cameraPosition.x += speed;
         Camera.main.gameObject.transform.position = cameraPosition;
