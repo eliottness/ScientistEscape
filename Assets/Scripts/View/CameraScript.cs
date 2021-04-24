@@ -10,14 +10,11 @@ public class CameraScript : MonoBehaviour
     public bool activate = true;
     #endif
     public float speed = 0.003f;
-    public GameObject rightWall;
-    public GameObject leftWall;
     
     // Start is called before the first frame update
     void Start()
     {
-        rightWall = GameObject.Find("RightWall");
-        leftWall = GameObject.Find("LeftWall");
+
     }
 
     // Update is called once per frame
@@ -32,15 +29,7 @@ public class CameraScript : MonoBehaviour
             return;
         
         var cameraPosition = Camera.main.gameObject.transform.position;
-        var rightWallPosition = rightWall.gameObject.transform.position;
-        var leftWallPosition = leftWall.gameObject.transform.position;
-        
         cameraPosition.x += speed;
-        rightWallPosition.x += speed;
-        leftWallPosition.x += speed;
-        
         Camera.main.gameObject.transform.position = cameraPosition;
-        rightWall.gameObject.transform.position = rightWallPosition;
-        leftWall.gameObject.transform.position = leftWallPosition;
     }
 }
