@@ -22,6 +22,7 @@ namespace Platformer.Gameplay
                 player.health.Die();
                 // player.collider.enabled = false;
                 player.controlEnabled = false;
+				model.camera.GetComponent<CameraScript>().activate = false;
 
                 if (player.audioSource && player.ouchAudio)
                     player.audioSource.PlayOneShot(player.ouchAudio);

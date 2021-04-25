@@ -14,6 +14,7 @@ namespace Platformer.Gameplay
         {
             var player = model.player;
             player.controlEnabled = true;
+            model.camera.GetComponent<CameraScript>().activate = true;
         }
     }
 }
