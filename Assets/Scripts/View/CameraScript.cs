@@ -14,6 +14,7 @@ public class CameraScript : MonoBehaviour
     public bool activate = true;
     #endif
 
+	public float initialSpeed = 0.01f;
     public float speed = 0.01f;
 	public float maxSpeed = 0.02f;
 	public float acceleration = 0.001f; // Speed acceleration
@@ -45,6 +46,11 @@ public class CameraScript : MonoBehaviour
 			timer -= delay;
 			Time.timeScale = 1.0f;
 		}
+    }
+
+    public void reset()
+    {
+	    speed = initialSpeed;
     }
 
     public void Move()
