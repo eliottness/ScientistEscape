@@ -26,6 +26,8 @@ namespace Platformer.Mechanics
         /// Initial jump velocity at the start of a jump.
         /// </summary>
         public float jumpTakeOffSpeed = 7;
+        private float jumpTakeOffY = 0f;
+        public float maxJumpSize = 1f;
 
         public JumpState jumpState = JumpState.Grounded;
         private bool stopJump;
@@ -44,6 +46,7 @@ namespace Platformer.Mechanics
         readonly PlatformerModel model = Simulation.GetModel<PlatformerModel>();
 
         public Bounds Bounds => collider2d.bounds;
+        private Transform transform;
 
         void Awake()
         {
@@ -52,6 +55,7 @@ namespace Platformer.Mechanics
             collider2d = GetComponent<Collider2D>();
             spriteRenderer = GetComponent<SpriteRenderer>();
             animator = GetComponent<Animator>();
+            transform = GetComponent<Transform>().gameObject.transform;
         }
 
         protected override void Update()
@@ -67,9 +71,13 @@ namespace Platformer.Mechanics
             {
                 move.x = Input.GetAxis("Horizontal");
                 if (jumpState == JumpState.Grounded && Input.GetButtonDown("Jump"))
-                    jumpState = JumpState.PrepareToJump;
-                else if (Input.GetButtonUp("Jump"))
                 {
+                    jumpState = JumpState.PrepareToJump;
+                    jumpTakeOffY = transform.position.y;
+                }
+                else if (Input.GetButtonUp("Jump") || (jumpState == JumpState.InFlight && transform.position.y - jumpTakeOffY >= maxJumpSize))
+                {
+                    Debug.Log(transform.position.y - jumpTakeOffY);
                     stopJump = true;
                     Schedule<PlayerStopJump>().player = this;
                 }
