@@ -11497,6 +11497,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4009130065942123197, guid: 9a1bd12ebb35d4dc997aa0c5494eda9b,
         type: 3}
+      propertyPath: m_text
+      value: Scientist Escape
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009130065942123197, guid: 9a1bd12ebb35d4dc997aa0c5494eda9b,
+        type: 3}
       propertyPath: m_havePropertiesChanged
       value: 1
       objectReference: {fileID: 0}
