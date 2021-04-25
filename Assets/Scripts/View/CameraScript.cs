@@ -13,13 +13,20 @@ public class CameraScript : MonoBehaviour
     #else
     public bool activate = true;
     #endif
+
     public float speed = 0.003f;
-    readonly PlatformerModel model = Simulation.GetModel<PlatformerModel>();    
+	public float maxSpeed = 0.015f;
+	public float acceleration = 0.001f; // Speed acceleration
+	public float delay = 15f; // Number of seconds between each acceleration
+
+	private float timer = 0.0f;
+
+    readonly PlatformerModel model = Simulation.GetModel<PlatformerModel>();
 
     // Start is called before the first frame update
     void Start()
     {
-
+		Time.timeScale = 1.0f;
     }
 
     // Update is called once per frame
@@ -27,6 +34,17 @@ public class CameraScript : MonoBehaviour
     {
         if (model.player.health.IsAlive)
     		Move();
+
+		timer += Time.deltaTime;
+		
+		if (timer >= delay)
+		{
+			if (speed <= maxSpeed)
+				speed += acceleration;
+
+			timer -= delay;
+			Time.timeScale = 1.0f;
+		}
     }
 
     public void Move()
