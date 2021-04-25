@@ -25,9 +25,4 @@ public class DeleteFire : MonoBehaviour
             Destroy(this.gameObject);
         } 
     }
-    
-    public void DeleteTile(Vector3Int point)
-    {
-        tiles.SetTile(point, null);
-    }
 }
