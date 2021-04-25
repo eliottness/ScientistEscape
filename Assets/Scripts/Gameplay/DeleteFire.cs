@@ -15,6 +15,16 @@ public class DeleteFire : MonoBehaviour
         tiles = GetComponent<Tilemap>();
     }
 
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.gameObject.tag == "Object")
+        {
+            Debug.Log("FEU ETEINT");
+            Destroy(collider.gameObject);
+            Destroy(this.gameObject);
+        } 
+    }
+    
     public void DeleteTile(Vector3Int point)
     {
         tiles.SetTile(point, null);
