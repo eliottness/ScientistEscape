@@ -6,7 +6,7 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
     public AudioMixer audioMixer;
-    public string name;
+    public new string name;
 
     public void SetVolume(float volume)
     {

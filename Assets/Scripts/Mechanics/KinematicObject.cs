@@ -166,6 +166,5 @@ namespace Platformer.Mechanics
             }
             body.position = body.position + move.normalized * distance;
         }
-
     }
 }
