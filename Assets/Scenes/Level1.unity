@@ -10558,8 +10558,9 @@ GameObject:
   - component: {fileID: 2001690760}
   - component: {fileID: 2001690762}
   - component: {fileID: 2001690763}
+  - component: {fileID: 2001690764}
   m_Layer: 0
-  m_Name: Obstacles
+  m_Name: FireZones
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10735,7 +10736,7 @@ Tilemap:
       - {fileID: 1747668986372096787, guid: 4dce469a4ee03d64cbf4ae21b4ed2ced, type: 3}
       - {fileID: -6856055144743474245, guid: 4dce469a4ee03d64cbf4ae21b4ed2ced, type: 3}
       - {fileID: 5930615450870197110, guid: 4dce469a4ee03d64cbf4ae21b4ed2ced, type: 3}
-      m_AnimationSpeed: 1
+      m_AnimationSpeed: 1.4611043
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: -20, y: -2, z: 0}
@@ -10766,7 +10767,7 @@ Tilemap:
       - {fileID: 1747668986372096787, guid: 4dce469a4ee03d64cbf4ae21b4ed2ced, type: 3}
       - {fileID: -6856055144743474245, guid: 4dce469a4ee03d64cbf4ae21b4ed2ced, type: 3}
       - {fileID: 5930615450870197110, guid: 4dce469a4ee03d64cbf4ae21b4ed2ced, type: 3}
-      m_AnimationSpeed: 1
+      m_AnimationSpeed: 3.9579449
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: -19, y: -2, z: 0}
@@ -10797,7 +10798,7 @@ Tilemap:
       - {fileID: 1747668986372096787, guid: 4dce469a4ee03d64cbf4ae21b4ed2ced, type: 3}
       - {fileID: -6856055144743474245, guid: 4dce469a4ee03d64cbf4ae21b4ed2ced, type: 3}
       - {fileID: 5930615450870197110, guid: 4dce469a4ee03d64cbf4ae21b4ed2ced, type: 3}
-      m_AnimationSpeed: 1
+      m_AnimationSpeed: 3.6500075
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: -18, y: -2, z: 0}
@@ -10828,7 +10829,7 @@ Tilemap:
       - {fileID: 1747668986372096787, guid: 4dce469a4ee03d64cbf4ae21b4ed2ced, type: 3}
       - {fileID: -6856055144743474245, guid: 4dce469a4ee03d64cbf4ae21b4ed2ced, type: 3}
       - {fileID: 5930615450870197110, guid: 4dce469a4ee03d64cbf4ae21b4ed2ced, type: 3}
-      m_AnimationSpeed: 1
+      m_AnimationSpeed: 3.7269375
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: -17, y: -2, z: 0}
@@ -10859,7 +10860,7 @@ Tilemap:
       - {fileID: 1747668986372096787, guid: 4dce469a4ee03d64cbf4ae21b4ed2ced, type: 3}
       - {fileID: -6856055144743474245, guid: 4dce469a4ee03d64cbf4ae21b4ed2ced, type: 3}
       - {fileID: 5930615450870197110, guid: 4dce469a4ee03d64cbf4ae21b4ed2ced, type: 3}
-      m_AnimationSpeed: 1
+      m_AnimationSpeed: 2.8727903
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: -16, y: -2, z: 0}
@@ -10890,7 +10891,7 @@ Tilemap:
       - {fileID: 1747668986372096787, guid: 4dce469a4ee03d64cbf4ae21b4ed2ced, type: 3}
       - {fileID: -6856055144743474245, guid: 4dce469a4ee03d64cbf4ae21b4ed2ced, type: 3}
       - {fileID: 5930615450870197110, guid: 4dce469a4ee03d64cbf4ae21b4ed2ced, type: 3}
-      m_AnimationSpeed: 1
+      m_AnimationSpeed: 1.403886
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: -15, y: -2, z: 0}
@@ -10921,7 +10922,7 @@ Tilemap:
       - {fileID: 1747668986372096787, guid: 4dce469a4ee03d64cbf4ae21b4ed2ced, type: 3}
       - {fileID: -6856055144743474245, guid: 4dce469a4ee03d64cbf4ae21b4ed2ced, type: 3}
       - {fileID: 5930615450870197110, guid: 4dce469a4ee03d64cbf4ae21b4ed2ced, type: 3}
-      m_AnimationSpeed: 1
+      m_AnimationSpeed: 1.7259996
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   m_TileAssetArray:
@@ -10954,7 +10955,7 @@ Tilemap:
   - m_RefCount: 7
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
-  m_AnimationFrameRate: 1
+  m_AnimationFrameRate: 15
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -21, y: -2, z: 0}
   m_Size: {x: 21, y: 2, z: 1}
@@ -11005,6 +11006,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9473387ae50744bf946308793bd64e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2001690764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001690758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d46d3859ee7944b8013ba4f7b5a23f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomDelayAnim: 20
 --- !u!1 &2010055519
 GameObject:
   m_ObjectHideFlags: 0
