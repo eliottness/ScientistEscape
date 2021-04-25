@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class DragRigidBody2D : MonoBehaviour
 {
+    private Vector3 SpawnPosition;
     private Vector3 screenPoint;
     private Vector3 offset;
 
@@ -10,6 +11,7 @@ public class DragRigidBody2D : MonoBehaviour
     {
         screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
         offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
+        SpawnPosition = this.gameObject.transform.position;
     }
 
     void OnMouseDrag()
@@ -17,6 +19,11 @@ public class DragRigidBody2D : MonoBehaviour
         Vector3 cursorPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
         Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(cursorPoint) + offset;
         transform.position = cursorPosition;
+    }
+
+    public void Reset()
+    {
+        this.gameObject.transform.position = SpawnPosition;
     }
 
     /* Class Variables

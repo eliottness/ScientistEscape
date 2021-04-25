@@ -21,8 +21,8 @@ public class DeleteFire : MonoBehaviour
         if (collider.gameObject.tag == "Object")
         {
             AudioSource.PlayClipAtPoint(fireExtinguish ,this.gameObject.transform.position);
-            Destroy(collider.gameObject);
-            Destroy(this.gameObject);
+            collider.gameObject.SetActive(false);
+            this.gameObject.SetActive(false);
         } 
     }
 }

@@ -18,7 +18,7 @@ namespace Platformer.Gameplay
             player.controlEnabled = false;
             if (player.audioSource && player.respawnAudio)
                 player.audioSource.PlayOneShot(player.respawnAudio);
-
+            
             model.camera.transform.position = model.cameraSpawnPoint.transform.position;
             
             player.health.Increment();
@@ -26,6 +26,8 @@ namespace Platformer.Gameplay
             player.jumpState = PlayerController.JumpState.Grounded;
             player.animator.SetBool("dead", false);
             Simulation.Schedule<EnablePlayerInput>(2f);
+            Simulation.Schedule<WaterBottleRespawn>();
+            Simulation.Schedule<FireRespawn>();
         }
     }
 }
