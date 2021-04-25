@@ -1,6 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Platformer.Gameplay;
+using static Platformer.Core.Simulation;
+using Platformer.Model;
+using Platformer.Core;
 
 namespace Platformer.UI
 {
@@ -10,6 +14,7 @@ namespace Platformer.UI
     public class MainUIController : MonoBehaviour
     {
         public GameObject[] panels;
+        readonly PlatformerModel model = Simulation.GetModel<PlatformerModel>();    
 
         public void SetActivePanel(int index)
         {
@@ -24,6 +29,12 @@ namespace Platformer.UI
         void OnEnable()
         {
             SetActivePanel(0);
+            model.camera.GetComponent<CameraScript>().activate = false;
+        }
+
+        void OnDisable()
+        {
+            model.camera.GetComponent<CameraScript>().activate = true;
         }
     }
 }
