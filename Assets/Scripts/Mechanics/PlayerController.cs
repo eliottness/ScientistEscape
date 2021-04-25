@@ -77,7 +77,6 @@ namespace Platformer.Mechanics
                 }
                 else if (Input.GetButtonUp("Jump") || (jumpState == JumpState.InFlight && transform.position.y - jumpTakeOffY >= maxJumpSize))
                 {
-                    Debug.Log(transform.position.y - jumpTakeOffY);
                     stopJump = true;
                     Schedule<PlayerStopJump>().player = this;
                 }
