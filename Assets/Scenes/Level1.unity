@@ -633,7 +633,8 @@ AudioSource:
   m_GameObject: {fileID: 440095265}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 4157736467124311147, guid: f1830f5890ccbd94ba2881d4bc55b99e,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 86672bd9d2aa46644b913db4c504c0af, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.334
@@ -9690,7 +9691,7 @@ PrefabInstance:
         type: 3}
       propertyPath: respawnAudio
       value: 
-      objectReference: {fileID: 8300000, guid: e18959d46b63f3c4c8cc020a433cf848, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 114230831923080080, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
         type: 3}
       propertyPath: gravityModifier
@@ -9722,6 +9723,12 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8509783501685719824, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 4507450124770347074, guid: f1830f5890ccbd94ba2881d4bc55b99e,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d60c822c3f1b408ea7a00ecdb5e047a, type: 3}
 --- !u!114 &1591548601 stripped
